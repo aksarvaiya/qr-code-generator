@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    height: 100vh; 
+    justify-content: center;
+    align-items: center;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}.light-active {
+    background-color: white;
+    color: gold;    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+}
+.dark {
+    background-color: rgb(64, 64, 64);
+    color: white;
+}.dark-active {
+    background-color: white;
+    color: purple;    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+* {
+    transition: all 0.1s ease;
+}
+
+.themeToggle {
+    display: flex;
+    background-color: darkgrey;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 40px;
+    padding: 10px;
+    border-radius: 25px;
+    position: absolute;
+    top: 3%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+section {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section h1 {
+    font-size: 18px;
+    font-weight: 400;
+    width: 80%;
+    text-align: center;
+}
+
+.qrCode {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+    border: 2px dotted rgba(0, 0, 0, 0.5);
+}
+
+.qrCode h2 {
+    color: rgb(120, 120, 120);
+    font-weight: 300;
+}
+
+.dwnlBtn {
+    color: blue;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 0.5;
+}
+.dwnlBtn:hover {
+    text-decoration: underline;
+}
+.dwnlBtn:active {
+    color: darkblue;
+}
+
+.genQr input {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    border: none;
+    height: 30px;
+}
+
+.genQr button {
+    background-color: rgb(2, 205, 2);
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    margin: 10px;
+    height: 30px;
+    font-size: 14px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.genQr button:hover {
+    box-shadow: 0 0 5px black;
+}
+.genQr button:active {
+    box-shadow: none;
+}
+
+.colorPicker {
+    display: flex;
+    box-shadow: none;
+    flex-direction: row;
+    text-align: center;
+    width: 90%;
+    border-radius: 0;
+}
+
+.colorPicker p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.fg-box,
+.bg-box {
+    width: 100%;
+}
+
+.colorPicker input {
+    box-shadow: none;
+    border: 1px dotted grey;
+}
+
+@media (width <= 768px) {
+    section {
+        padding: 10px;
+        width: 80%;
+    }
+
+    .genQr input {
+        border: 1px solid grey;
+    }
+}
